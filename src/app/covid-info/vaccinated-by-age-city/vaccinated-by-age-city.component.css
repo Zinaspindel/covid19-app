@@ -1,0 +1,98 @@
+.row {
+    width: 97.2%;
+    margin:0 auto;
+    margin-bottom: 30px;
+    height:348px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.first{
+    width:66.5%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding:0;
+}
+.second {
+    width:33%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.title-container{
+    width:95%;
+    height:70px;
+    margin-bottom: 0;
+    display: flex;
+}
+.title{
+    width:50%;
+    display: flex;
+    align-items: center;
+}
+.title p {
+    font-size: 15px;
+    font-weight: 700;
+}
+.options{
+    position: relative;
+    display: flex;
+    width:50%;
+    align-items: center;
+}
+.search-icon{
+    padding-left: 5px;
+}
+.search-box{
+    align-items: center;
+    display: flex;
+    position:absolute;
+    padding: 0 20px;
+    width:170px;
+    height:40px;
+    left:75px;
+    border: 0.1rem solid #e4e9f2;
+    border-radius: 25px;
+}
+input {
+    border: 0;
+    width:100px;
+}
+.share{
+    position: absolute;
+    left:35px; 
+    height:29px;
+    width:29px;
+    background-color: #fff;
+    border: 1px solid rgb(194, 193, 193);
+    border-radius: 50%;
+    position: absolute;
+    bottom:20px;
+}
+.share img {
+    position: absolute;
+    bottom:5px;
+    left:2px;
+}
+.download {
+    height:29px;
+    width:29px;
+    background-color: #fff;
+    border: 1px solid rgb(194, 193, 193);    
+    border-radius: 50%;
+    position: absolute;
+    left:0;
+    bottom:20px;
+}
+.download img {
+    padding:0;
+    margin:0;
+    position: absolute;
+    left:5px;
+    bottom:5px;
+}
+.cities-table {
+    width:100%;
+    background-color: rebeccapurple;
+    margin: 0;
+}
+

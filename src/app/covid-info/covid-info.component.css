@@ -1,71 +1,8 @@
+
 .info-container{
     padding-top: 167px;
     height:1500px;
     background-color: #edf1f7;
 }
-.row {
-    width: 97.3%;
-    margin: 0 auto;
-    margin-bottom: 30px;
-}
-.general-info{
-    height:19vh;
-}
-.col {
-    background-color: #fff;
-    border-radius: 10px;
-    margin-left: 10px;
-}
-p{
-    margin:0;
-}
-hr{
-    margin: 2px;
-    background-color: #97a8ac;
-}
-.headline-container{
-    height:40px;
-    width:97%;
-    margin: 0 auto;
-    display: flex;
-}
-.headline{
-    padding-top:17px;
-    font-size: 14px;
-    font-weight: 600;
-}
-.info-icon{
-    text-align: center;
-    color:white;
-    font-size: 11px;
-    font-weight: 500;
-    margin-top:19px;
-    margin-right:6px;
-    height: 16.5px;
-    width: 16.5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-}
-.info{
-    height:80%;
-    margin: 0 auto;
-    width:97%;
-}
-.number{
-    padding-top: 3px;
-    font-size: 22px;
-    font-weight: 600;
-}
-.added{
-    font-size: 12px;
-    padding-top: 2px;
-}
-.value{
-    font-weight: 600;
-    direction: ltr;
-    padding-left:3px;
-}
-.total{
-    padding-top:7px;
-}
+
+

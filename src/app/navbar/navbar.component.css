@@ -5,6 +5,7 @@ nav {
     background-color: white;
 }
 .nav-container{
+    z-index: 100;
     width:99.6%;
     right:0;
     display: block;

@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="first">
+        <div class="row title-container">
+            <div class="title">
+                <p>התחסנות לפי ישובים</p>
+            </div>
+            <div class="options">
+                <div class="search-box">
+                    <div class="search-icon"><i class="fa fa-search"></i></div>
+                    <input type="text" class="search" placeholder="חיפוש יישוב" >
+                </div>
+                <div class="share">
+                    <img
+                      src="/assets/icons/share-icon.png"
+                      alt=""
+                      style="height: 16px; width: 20px"
+                    />
+                  </div>
+                  <div class="download">
+                    <img
+                      src="/assets/icons/down-arrow-full.png"
+                      alt=""
+                      style="height: 13px; width: 18px"
+                    />
+                  </div>
+            </div>
+        </div>
+        <div class="row cities-table">
+            <div class="row" *ngFor="let city of cities">
+                <div class="col city-name">{{city.name}}</div>
+                <div class="col vaccinated">{{city.firstVaccine}}</div>
+                <div class="col vaccinated">{{city.secondVaccine}}</div>
+                <div class="col active-infected">{{city.activePatients}}</div>
+                <div class="col active-infected ratio">{{city.activePatientsPer10}}</div>
+                <div class="col active-infected sum">{{city.dailySumGrade}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="second">2</div>
+</div>
