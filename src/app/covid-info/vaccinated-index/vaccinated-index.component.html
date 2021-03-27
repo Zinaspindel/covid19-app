@@ -1,6 +1,6 @@
-<div class="row">
-  <div class="row headline">מדדי התחסנות</div>
-  <div class="row total-data">
+<div class="row contain" [ngClass]="getDisplayStatus()">
+  <div class="row headline" [ngClass]="getDisplayStatus()">מדדי התחסנות</div>
+  <div class="row total-data" [ngClass]="getDisplayStatus()">
     <div class="col data left">
       <div class="title-container" style="display: flex">
         <div class="title">
@@ -8,7 +8,7 @@
         </div>
         <div class="options" style="display: flex">
           <div class="time" style="display: flex">
-            <div class="time-container" style="display: flex">
+            <div class="time-container" style="display: flex" [ngClass]="getDarkMode()">
               <p>חודש אחרון</p>
               <div class="arrow">
                 <img
@@ -47,16 +47,17 @@
       </div>
       <div class="graph-container">
         <img src="/assets/icons/right-graph.png" alt="right-graph" class="left-graph">
+      </div>
     </div>
-    </div>
-    <div class="col data">
+    <div class="w-100"></div>
+    <div class="col data mid">
       <div class="title-container" style="display: flex">
         <div class="title">
           <p>מספר מתחסנים - מצטבר</p>
         </div>
         <div class="options" style="display: flex">
           <div class="time" style="display: flex">
-            <div class="time-container" style="display: flex">
+            <div class="time-container" style="display: flex" [ngClass]="getDarkMode()">
               <p>חודש אחרון</p>
               <div class="arrow">
                 <img
@@ -97,6 +98,7 @@
         <img src="/assets/icons/mid-graph.png" alt="mid-graph" class="left-graph">
     </div>
     </div>
+    <div class="w-100"></div>
     <div class="col data right">
       <div class="title-container" style="display: flex">
         <div class="title">
@@ -104,7 +106,7 @@
         </div>
         <div class="options" style="display: flex">
           <div class="time" style="display: flex">
-            <div class="time-container" style="display: flex">
+            <div class="time-container" [ngClass]="getDarkMode()">
               <p>חודש אחרון</p>
               <div class="arrow">
                 <img

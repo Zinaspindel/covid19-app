@@ -1,6 +1,6 @@
 <div class="nav-container">
   <p class="navbar-decoration"></p>
-  <nav class="navbar navbar-expand-lg" style="display: flex;">
+  <nav class="navbar navbar-expand-lg " style="display: flex;">
       <div class="container-fluid">
           <a class="navbar-brand" href="#">
               <img src="https://datadashboard.health.gov.il/COVID-19/assets/images/logo_DAshboard-01.png" alt="" width="241" height="48">
@@ -38,14 +38,19 @@
           </ul>
         </div>
       </div>
-      <div class="change-display-container">
-        <span class="change-display-button">לתצוגה נגישה</span>
+      <div class="change-display-container" *ngIf="!displayStatus">
+        <span class="change-display-button" (click)="changeDisplay()">לתצוגה נגישה</span>
+      </div>
+      <div class="change-display-container" *ngIf="displayStatus">
+        <span class="change-display-button to-regular" (click)="changeDisplay()">לתצוגה רגילה</span>
       </div>
   </nav>
   <div class="second-navbar" style="display: flex;">
+    <div class="headlines">
       <p class="first-headline">נגיף הקורונה בישראל - תמונת מצב כללית
       </p>
       <p class="second-headline">
         עדכון אחרון: 19 במרץ 2021 | 07:24</p>
+    </div>
   </div>
 </div>

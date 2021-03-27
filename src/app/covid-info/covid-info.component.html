@@ -1,10 +1,11 @@
-<div class="info-container">
+<div class="info-container"
+[ngClass]="getDisplayStatus()">
     <app-general-info></app-general-info>
     <app-vaccinated-index></app-vaccinated-index>
     <app-vaccinated-by-age-city></app-vaccinated-by-age-city>
-    <div class="row">4</div>
-    <div class="row">5</div>
-    <div class="row">6</div>
-    <div class="row">7</div>
+    <app-infected-info></app-infected-info>
+    <app-daily-recovers-and-deaths></app-daily-recovers-and-deaths>
+    <app-ramzor-plan></app-ramzor-plan>
+    <app-hospitals-data></app-hospitals-data>
 </div>
 

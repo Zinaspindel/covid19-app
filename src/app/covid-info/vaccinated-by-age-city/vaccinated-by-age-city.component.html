@@ -1,40 +1,107 @@
-<div class="row">
-    <div class="first">
-        <div class="row title-container">
-            <div class="title">
-                <p>התחסנות לפי ישובים</p>
-            </div>
-            <div class="options">
-                <div class="search-box">
-                    <div class="search-icon"><i class="fa fa-search"></i></div>
-                    <input type="text" class="search" placeholder="חיפוש יישוב" >
-                </div>
-                <div class="share">
-                    <img
-                      src="/assets/icons/share-icon.png"
-                      alt=""
-                      style="height: 16px; width: 20px"
-                    />
-                  </div>
-                  <div class="download">
-                    <img
-                      src="/assets/icons/down-arrow-full.png"
-                      alt=""
-                      style="height: 13px; width: 18px"
-                    />
-                  </div>
-            </div>
+<div class="row contain">
+  <div class="first" [ngClass]="getDisplayStatus()">
+    <div class="row title-container" [ngClass]="getDisplayStatus()">
+      <div class="title">
+        <p>התחסנות לפי ישובים</p>
+      </div>
+      <div class="options">
+        <div class="search-box">
+          <div class="search-icon"><i class="fa fa-search"></i></div>
+          <input type="text" class="search" placeholder="חיפוש יישוב" />
         </div>
-        <div class="row cities-table">
-            <div class="row" *ngFor="let city of cities">
-                <div class="col city-name">{{city.name}}</div>
-                <div class="col vaccinated">{{city.firstVaccine}}</div>
-                <div class="col vaccinated">{{city.secondVaccine}}</div>
-                <div class="col active-infected">{{city.activePatients}}</div>
-                <div class="col active-infected ratio">{{city.activePatientsPer10}}</div>
-                <div class="col active-infected sum">{{city.dailySumGrade}}</div>
-            </div>
+        <div class="share">
+          <img
+            src="/assets/icons/share-icon.png"
+            alt=""
+            style="height: 16px; width: 20px"
+          />
         </div>
+        <div class="download">
+          <img
+            src="/assets/icons/down-arrow-full.png"
+            alt=""
+            style="height: 13px; width: 18px"
+          />
+        </div>
+      </div>
     </div>
-    <div class="second">2</div>
+    <div class="row cities-table" [ngClass]="getDisplayStatus()">
+      <div class="row table-values">
+        <div class="city-name" style="font-weight: 400">
+          <p>יישוב</p>
+        </div>
+        <div class="coll vaccinated header">% מתחסנים מנה ראשונה</div>
+        <div class="coll vaccinated header">% מתחסנים מנה שנייה</div>
+        <div class="coll active-infected">חולים פעילים</div>
+        <div class="coll active-infected">חולים פעילים לכל 10,000 נפש</div>
+        <div class="coll active-infected sum">ציון יומי מחושב</div>
+      </div>
+      <div class="row cities-values-container">
+        <div class="row city-values" *ngFor="let city of cities">
+          <div class="coll active-infected sum">
+            <p class="daily-grade">
+              {{ city.dailySumGrade }}
+            </p>
+          </div>
+          <div class="coll active-infected ratio">
+            {{ city.activePatientsPer10 }}
+          </div>
+          <div class="coll active-infected">{{ city.activePatients }}</div>
+          <div class="coll vaccinated">
+            <div class="percentage">{{ city.secondVaccine }}%</div>
+            <div class="progress-bar-container">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <div class="coll vaccinated">
+            <div class="percentage">{{ city.firstVaccine }}%</div>
+            <div class="progress-bar-container">
+              <div class="progress-bar fi"></div>
+            </div>
+          </div>
+          <div class="coll city-name">{{ city.name }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-100"></div>
+  <div class="second" [ngClass]="getDisplayStatus()">
+    <div class="headline" [ngClass]="getDisplayStatus()">
+      <div class="title-container2" style="display: flex">
+        <div class="title2">
+          <p>אחוז מתחסנים לפי גיל</p>
+        </div>
+        <div class="options2" style="display: flex">
+          <div class="share2">
+            <img
+              src="/assets/icons/share-icon.png"
+              alt=""
+              style="height: 16px; width: 20px"
+            />
+          </div>
+          <div class="download2">
+            <img
+              src="/assets/icons/down-arrow-full.png"
+              alt=""
+              style="height: 13px; width: 18px"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="index" style="display: flex">
+        <div class="vaccine first-vac">
+          <div class="dot"></div>
+          <p>%מתחסנים מנה ראשונה</p>
+        </div>
+        <div class="vaccine second-vac">
+          <div class="dot sec"></div>
+          <p>%מתחסנים מנה שנייה</p>
+        </div>
+        
+      </div>
+    </div>
+    <div class="graph-container" [ngClass]="getDisplayStatus()">
+        <img src="/assets/graph.png" alt="right-graph" class="graph">
+      </div>
+  </div>
 </div>

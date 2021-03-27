@@ -8,6 +8,10 @@ import { CovidInfoComponent } from './covid-info/covid-info.component';
 import { GeneralInfoComponent } from './covid-info/general-info/general-info.component';
 import { VaccinatedIndexComponent } from './covid-info/vaccinated-index/vaccinated-index.component';
 import { VaccinatedByAgeCityComponent } from './covid-info/vaccinated-by-age-city/vaccinated-by-age-city.component';
+import { InfectedInfoComponent } from './covid-info/infected-info/infected-info.component';
+import { DailyRecoversAndDeathsComponent } from './covid-info/daily-recovers-and-deaths/daily-recovers-and-deaths.component';
+import { RamzorPlanComponent } from './covid-info/ramzor-plan/ramzor-plan.component';
+import { HospitalsDataComponent } from './covid-info/hospitals-data/hospitals-data.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { VaccinatedByAgeCityComponent } from './covid-info/vaccinated-by-age-cit
     CovidInfoComponent,
     GeneralInfoComponent,
     VaccinatedIndexComponent,
-    VaccinatedByAgeCityComponent
+    VaccinatedByAgeCityComponent,
+    InfectedInfoComponent,
+    DailyRecoversAndDeathsComponent,
+    RamzorPlanComponent,
+    HospitalsDataComponent
   ],
   imports: [
     BrowserModule,

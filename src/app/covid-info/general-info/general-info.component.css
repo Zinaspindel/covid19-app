@@ -1,5 +1,5 @@
 .row {
-    width: 97.2%;
+    width: 97%;
     margin: 0 auto;
     margin-bottom: 31px;
 }
@@ -10,6 +10,15 @@
     background-color: #fff;
     border-radius: 10px;
     margin-left: 10px;
+}
+.dark-mode{
+    background-color: #384f5f;
+    box-shadow: rgba(26,31,51,0.18) 0 8px 4px 0;
+    color:white;
+}
+.dark-mode .headline-container .info-icon {
+    background-color: #fff;
+    color: #6a7b87;
 }
 .last {
     margin-left:0;
@@ -129,4 +138,51 @@ hr{
 }
 .sec{
     padding-top:55px;
+}
+.first, .second {
+    display: none;
+}
+@media screen and (max-width:1400px){
+    .general-info{
+        height:400px;
+    }
+    .first{
+        display:inline-block;
+    }
+    .col {
+        justify-content: space-between;
+        margin-left: 9px;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
+    .hospitalized-patients, .last {
+        margin-left: 0;
+    }
+    .vaccinated {
+        margin-right: 0;
+    }
+}
+@media screen and (max-width:900px){
+    .row{
+        width:98.5%;
+    }
+    .general-info{
+        height:600px;
+    }
+    .first{
+        display: none;
+    }
+    .second {
+        display: inline-block;
+    }
+    .col {
+        justify-content: space-between;
+        margin-left: 9px;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
+    .vaccinated, .active-patients, .last {
+        margin-left: 0;
+        
+    }
 }

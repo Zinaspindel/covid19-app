@@ -1,0 +1,140 @@
+<div class="row">
+  <div class="col-5" [ngClass]="getDisplayStatus()">
+    <div class="title-container" style="display: flex">
+      <div class="title right">
+        <p>סטטוס בתי חולים</p>
+      </div>
+      <div class="options" style="display: flex">
+        <div class="share">
+          <img
+            src="/assets/icons/share-icon.png"
+            alt=""
+            style="height: 16px; width: 20px"
+          />
+        </div>
+        <div class="download">
+          <img
+            src="/assets/icons/down-arrow-full.png"
+            alt=""
+            style="height: 13px; width: 18px"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="table-header">
+      <div class="category hospital-name">
+        <div>בית חולים</div>
+      </div>
+      <div class="category">
+        <div>% תפוסה כללי</div>
+      </div>
+      <div class="category">
+        <div>% תפוסה קורונה</div>
+      </div>
+      <div class="category">
+        <div>אנשי צוות מאומתים ובבידוד</div>
+      </div>
+    </div>
+    <div class="hospitals-table">
+      <div class="hospital-data-container">
+        <div class="hospital-data" *ngFor="let hospital of hospitals">
+          <div class="category">{{ hospital.verifiedStaff }}</div>
+          <ng-template #no_info>
+            <div class="category percentage">
+              <div class="value no-info">לא ידוע</div>
+              <div class="progress-bar-total">
+                <div class="progress-bar-container"></div>
+              </div>
+            </div>
+          </ng-template>
+          <div
+            class="category"
+            *ngIf="getOccupationCovData(hospital); else no_info"
+          >
+            {{ hospital.occupationCovid }}
+          </div>
+          <div
+            class="category percentage"
+            *ngIf="getOccupationGenData(hospital); else no_info"
+          >
+            <div class="value">{{ hospital.occupationGeneral }}%</div>
+            <div class="progress-bar-total">
+              <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+              </div>
+            </div>
+          </div>
+          <div class="category hospital-name table-name">
+            {{ hospital.name }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4" [ngClass]="getDisplayStatus()">
+    <div class="title-container" style="display: flex">
+        <div class="title mid">
+          <p>פילוח מדדים שונים על פי גיל ומין</p>
+        </div>
+        <div class="options" style="display: flex">
+          <div class="time" style="display: flex">
+            <div class="time-container" style="display: flex">
+              <p>מאומתים</p>
+              <div class="arrow">
+                <img
+                  src="/assets/icons/expand-button.png"
+                  alt=""
+                  style="height: 7px; width: 7px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="share">
+            <img
+              src="/assets/icons/share-icon.png"
+              alt=""
+              style="height: 16px; width: 20px"
+            />
+          </div>
+          <div class="download">
+            <img
+              src="/assets/icons/down-arrow-full.png"
+              alt=""
+              style="height: 13px; width: 18px"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="index" style="display: flex">
+        <div class="vaccine first">
+          <div class="dot"></div>
+          <p> גברים</p>
+        </div>
+        <div class="vaccine second">
+          <div class="dot sec"></div>
+          <p>נשים</p>
+        </div>
+      </div>
+      <div class="graph-container">
+        <img
+          src="/assets/icons/stats-by-gender-graph.png"
+          alt="left-graph"
+          class="left-graph"
+        />
+      </div>
+  </div>
+  <div class="col-3" [ngClass]="getDisplayStatus()">
+    <div class="title-container" style="display: flex">
+        <div class="title left">
+          <p>אנשי צוות בריאות מאומתים ובבידוד</p>
+        </div>
+    </div>
+    <div class="graph-container left-col">
+        <img
+          src="/assets/icons/staff-graph.png"
+          alt="left-graph"
+          class="left-graph"
+        />
+      </div>
+  </div>
+</div>

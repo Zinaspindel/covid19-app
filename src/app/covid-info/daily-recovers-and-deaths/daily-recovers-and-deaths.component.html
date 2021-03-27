@@ -1,0 +1,163 @@
+<div class="row">
+    <div class="col-4"
+    [ngClass]="getDisplayStatus()">
+        <div class="title-container" style="display: flex">
+            <div class="title right">
+              <p>ממוצע מאומתים שבועי</p>
+            </div>
+            <div class="options" style="display: flex">
+              <div class="share">
+                <img
+                  src="/assets/icons/share-icon.png"
+                  alt=""
+                  style="height: 16px; width: 20px"
+                />
+              </div>
+              <div class="download">
+                <img
+                  src="/assets/icons/down-arrow-full.png"
+                  alt=""
+                  style="height: 13px; width: 18px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="index">
+            <div class="note" style="display: flex">
+              <img
+                src="/assets/icons/light-bulb.png"
+                alt=""
+                class="lamp-icon"
+                style="width: 16px; height: 16px"
+              />
+              <p>
+                מספר הנדבקים היום הינו
+                <strong>כפול </strong>
+                מהמספר
+                <strong>לפני 84 ימים</strong>
+              </p>
+            </div>
+          </div>
+          <div class="graph-container">
+            <img
+              src="/assets/icons/weekly-positive-average-graph.png"
+              alt="mid-graph"
+              class="left-graph daily"
+            />
+        </div>
+    </div>
+    <div class="col-4"
+    [ngClass]="getDisplayStatus()">
+        <div class="title-container" style="display: flex">
+            <div class="title mid">
+              <p>מחלימים - יומי</p>
+            </div>
+            <div class="options" style="display: flex">
+                <div class="time" style="display: flex">
+                    <div class="time-container" style="display: flex">
+                      <p>חודש אחרון</p>
+                      <div class="arrow">
+                        <img
+                          src="/assets/icons/expand-button.png"
+                          alt=""
+                          style="height: 7px; width: 7px"
+                        />
+                      </div>
+                    </div>
+                  </div>
+              <div class="share">
+                <img
+                  src="/assets/icons/share-icon.png"
+                  alt=""
+                  style="height: 16px; width: 20px"
+                />
+              </div>
+              <div class="download">
+                <img
+                  src="/assets/icons/down-arrow-full.png"
+                  alt=""
+                  style="height: 13px; width: 18px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="index">
+            <div class="note note-mid" style="display: flex">
+              <img
+                src="/assets/icons/light-bulb.png"
+                alt=""
+                class="lamp-icon"
+                style="width: 16px; height: 16px"
+              />
+              <p>
+                סה"כ
+                <strong>809,298</strong> 
+                מחלימים
+                <strong>מאז תחילת המשבר (מרץ 2020)</strong>
+              </p>
+            </div>
+          </div>
+          <div class="graph-container">
+            <img
+              src="/assets/icons/recovers-daily-graph.png"
+              alt="mid-graph"
+              class="left-graph daily"
+            />
+        </div>
+    </div>
+    <div class="col-4"
+    [ngClass]="getDisplayStatus()">
+        <div class="title-container" style="display: flex">
+            <div class="title left">
+              <p>נפטרים - יומי</p>
+            </div>
+            <div class="options" style="display: flex">
+                <div class="time" style="display: flex">
+                    <div class="time-container" style="display: flex">
+                      <p>חודש אחרון</p>
+                      <div class="arrow">
+                        <img
+                          src="/assets/icons/expand-button.png"
+                          alt=""
+                          style="height: 7px; width: 7px"
+                        />
+                      </div>
+                    </div>
+                  </div>
+              <div class="share">
+                <img
+                  src="/assets/icons/share-icon.png"
+                  alt=""
+                  style="height: 16px; width: 20px"
+                />
+              </div>
+              <div class="download">
+                <img
+                  src="/assets/icons/down-arrow-full.png"
+                  alt=""
+                  style="height: 13px; width: 18px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="index">
+            <div class="vaccine-index" style="display: flex">
+              <div class="vaccine first">
+                <div class="dot sec"></div>
+                <p>נפטרים</p>
+              </div>
+              <div class="vaccine second">
+                <div class="line-left"></div>
+                <p>ממוצע חולים קשה לתקופת הזמן המוצגת</p>
+              </div>
+            </div>
+          </div>
+          <div class="graph-container gr-con-left">
+            <img
+              src="/assets/icons/deaths-daily-graph.png"
+              alt="mid-graph"
+              class="left-graph daily"
+            />
+          </div>
+    </div>
+</div>

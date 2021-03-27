@@ -1,0 +1,231 @@
+@import url("../vaccinated-by-age-city/vaccinated-by-age-city.component.css");
+.row{
+    height:350px;
+}
+.dark-mode{
+    background-color: #384f5f;
+    box-shadow: rgba(26,31,51,0.18) 0 8px 4px 0;
+    color:white;
+}
+.dark-mode .title-container .title .info-icon, .dark-mode .title-container2 .title2 .info-icon2 {
+    background-color: #fff;
+    color:  #6a7b87;
+}
+.dark-mode .cities-table .table-values .positive-container .positive {
+    background-color: #354047;
+} 
+.dark-mode .cities-table .cities-values-container .positive-container2 {
+    background-color: #304453;
+} 
+.dark-mode .note, .dark-mode .note-first {
+    background-color: #2a3b47;
+}
+.second{
+    width:33%;
+}
+.title-container{
+    height:45px !important;
+}
+.title {
+    width:25%;
+}
+.search-box{
+    height:30px;
+}
+.share, .download {
+    bottom: 8px;
+}
+.info-icon{
+    text-align: center;
+    color:white;
+    font-size: 11px;
+    font-weight: 500;
+    margin-right:6px;
+    height: 16.5px;
+    width: 16.5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+}
+.info2{
+    right:5px;
+    background-color: #334049;
+}
+.options {
+    width:480px;
+}
+.note-first{
+    position: absolute;
+    text-align: center;
+    display: flex;
+    font-size: 12px;
+    background-color: rgb(230 241 244);
+    width:220px;
+    height:22px;
+}
+p {
+    margin-bottom:0;
+}
+.more-info{
+    width:95%;
+    margin:0 auto;
+    height:70px;
+    margin-bottom: 10px;
+}
+.comment {
+    font-size:12px;
+    font-weight: 700;
+}
+.color-index {
+    display: flex;
+}
+.color {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.red-back, .orange-back, .yellow-back, .green-back{ 
+    margin-left:10px;
+    height:33px;
+    width:33px;
+    border-radius: 3px;
+}
+
+.green {
+    background-color: rgb(184, 222, 146);
+}
+.grade {
+    font-weight: 200;
+    font-style: italic;
+    color:#9aa1a7;
+}
+.col {
+    font-size: 13px;
+    text-align: center;
+    justify-content: center;
+    padding:0;
+}
+.cities-table{
+    height:220px;
+}
+.cities-values-container{
+    height:170px;
+}
+.table-values{
+    height:56px;
+    width:99.92%;
+    padding:0;
+    padding-right:10px;
+    margin:0;
+    text-align: center;
+    display: flex;
+}
+.city-name {
+    font-size:14px;
+    font-weight: 700;
+    text-align: right !important;
+    font-weight: 700;
+}
+.city-name p{
+    line-height: 1rem;
+}
+.city-values{
+    height: 32px;
+    margin:0 auto;
+}
+.positive-container {
+    padding:0;
+    display: flex;
+    background-color: #daeaee;
+}
+.positive-container2{
+    height: 100%;
+    display: flex;
+    background-color: #f7fafc;
+}
+.positive2{
+    display: flex;
+    align-items: center;
+}
+.color-sqr{
+    margin: 0 auto;
+    height:20px;
+    width:20px;
+    border-radius: 3px;
+}
+.grade-sqr {
+    height:24px;
+    width:24px;
+    border-radius: 3px;
+    margin: 0 auto;
+    padding: 2px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.red {
+    background-color: #fa9e8f;
+}
+.orange {
+    background-color: #f2c580;
+}
+.yellow {
+    background-color: #fcfc70;
+}
+.title2{
+    display: flex;
+    width:75%;
+    position: relative;
+}
+.info-icon2{
+    position: absolute;
+    text-align: center;
+    color:white;
+    font-size: 11px;
+    font-weight: 500;
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    bottom: 6px;
+    right:180px;
+}
+.note{
+    position: absolute;
+    text-align: center;
+    display: flex;   
+    font-size:11px;
+    background-color: rgb(230 241 244);
+    width:360px;
+    height:35px;
+    margin-right:20px;
+}
+.note p{
+    padding:0;
+    text-align: right;
+}
+.info-note{
+    width:24px;
+    margin:0 3px;
+    margin-top:5px;
+}
+.left {
+    padding-top: 0;
+    height:70%;
+    width:95%;
+}
+@media screen and (max-width:1200px){
+    .contain{
+        height:757px;
+    }
+    .first, .second {
+        width:100%;
+        height:47%;
+    }
+}
+@media screen and (max-width:900px){
+    .row{
+        width:98.5%;
+    }
+}

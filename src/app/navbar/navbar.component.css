@@ -77,6 +77,13 @@ nav {
     padding: 4px 16px;
     border-radius: 15px;
 }
+.to-regular{
+    color:#39475d;
+    background-color: #d8d8d8;
+}
+.change-display-button:hover{
+    cursor: pointer;
+}
 p{
     margin: 0;
 }
@@ -98,9 +105,63 @@ p{
     color:white;
     padding: 0 18px;
 }
+.first-headline:hover{
+    cursor: pointer;
+}
 .second-headline{
     color:white;
     font-size: 0.9rem;
     padding: 0 15px;
     text-align: center;
+}
+.headlines{
+    display: flex;
+}
+@media screen and (max-width:992px){
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(55,79,96, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+    button{
+        position: absolute;
+        right:0;
+        top:15px;
+    }
+    .navbar-brand{
+        margin-right:45px;
+    }
+    .change-display-container{
+        position: absolute;
+        left:10px;
+        width:auto
+    }
+    .second-navbar{
+        background-color: #fff;
+        justify-content: right;
+        text-align: right;
+        height:55px;
+        box-shadow: 
+        0 2.8px 2.2px rgba(153, 153, 153, 0.034),
+        0 6.7px 5.3px rgba(153, 153, 153, 0.034),
+        0 10.5px 10px rgba(153, 153, 153, 0.034),
+        0 10.3px 10.9px rgba(153, 153, 153, 0.034),
+        0 21.8px 10.4px rgba(153, 153, 153, 0.034),
+        0 10px 20px rgba(0, 0, 0, 0.12);
+    }
+    .first-headline, .second-headline{
+        color: black;
+        text-align: right;
+    }
+    .first-headline{
+        font-size: 13px;
+        padding:0;
+    }
+    .second-headline{
+        font-size: 10px;
+        padding:0;
+    }
+    .headlines {
+        padding-right:12px;
+        width:65%;
+        margin:0;
+    }
 }

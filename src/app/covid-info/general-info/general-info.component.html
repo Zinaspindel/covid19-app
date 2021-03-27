@@ -1,5 +1,6 @@
 <div class="row general-info">
-    <div class="col new-verified">
+    <div class="col new-verified"
+    [ngClass]="getDisplayStatus()">
         <div class="headline-container">
             <p class="headline">מאומתים חדשים אתמול</p>
             <span class="info-icon">i</span>
@@ -16,7 +17,8 @@
             </div>
         </div>
     </div>
-    <div class="col active-patients">
+    <div class="col active-patients"
+    [ngClass]="getDisplayStatus()">
         <div class="headline-container">
             <p class="headline">חולים פעילים</p>
             <span class="info-icon">i</span>
@@ -53,7 +55,9 @@
             </div>
         </div>
     </div>
-    <div class="col hospitalized-patients">
+    <div class="w-100 second"></div>
+    <div class="col hospitalized-patients"
+    [ngClass]="getDisplayStatus()">
         <div class="headline-container">
             <p class="headline">חולים קשה</p>
             <span class="info-icon">i</span>
@@ -80,7 +84,9 @@
             </div>
         </div>
     </div>
-    <div class="col vaccinated">
+    <div class="w-100 first"></div>
+    <div class="col vaccinated"
+    [ngClass]="getDisplayStatus()">
         <div class="headline-container">
             <p class="headline">מתחסנים מנה ראשונה </p>
             <span class="info-icon">i</span>
@@ -104,7 +110,8 @@
             </div>
         </div>
     </div>
-    <div class="col deaths">
+    <div class="w-100 second"></div>
+    <div class="col deaths" [ngClass]="getDisplayStatus()">
         <div class="headline-container">
             <p class="headline">נפטרים מצטבר</p>
             <span class="info-icon">i</span>
@@ -117,7 +124,7 @@
             </div>
         </div>
     </div>
-    <div class="col positive-percentage last">
+    <div class="col positive-percentage last" [ngClass]="getDisplayStatus()">
         <div class="headline-container">
             <p class="headline">אחוז בדיקות חיוביות אתמול</p>
             <span class="info-icon">i</span>

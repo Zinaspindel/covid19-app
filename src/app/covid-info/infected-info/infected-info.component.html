@@ -1,0 +1,308 @@
+<div class="row">
+  <div class="col-4 one" >
+    <div class="right" [ngClass]="getDisplayStatus()">
+      <div class="title-container" [ngClass]="getDisplayStatus()" style="display: flex">
+        <div class="title">
+          <p>מאומתים חדשים - יומי</p>
+        </div>
+        <div class="options" style="display: flex">
+          <div class="time" style="display: flex">
+            <div class="time-container" style="display: flex">
+              <p>חודש אחרון</p>
+              <div class="arrow">
+                <img
+                  src="/assets/icons/expand-button.png"
+                  alt=""
+                  style="height: 7px; width: 7px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="share">
+            <img
+              src="/assets/icons/share-icon.png"
+              alt=""
+              style="height: 16px; width: 20px"
+            />
+          </div>
+          <div class="download">
+            <img
+              src="/assets/icons/down-arrow-full.png"
+              alt=""
+              style="height: 13px; width: 18px"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="index" [ngClass]="getDisplayStatus()">
+        <div class="note" style="display: flex">
+          <img
+            src="/assets/icons/light-bulb.png"
+            alt=""
+            class="lamp-icon"
+            style="width: 16px; height: 16px"
+          />
+          <p>
+            מספר הנדבקים היום הינו
+            <strong>כפול </strong>
+            מהמספר
+            <strong>לפני 84 ימים</strong>
+          </p>
+        </div>
+        <div class="vaccine-index" style="display: flex">
+          <div class="vaccine first">
+            <div class="dot"></div>
+            <p>מאומתים חדשים</p>
+          </div>
+          <div class="vaccine second">
+            <div class="dot sec"></div>
+            <p>ממוצע נע 7 ימים</p>
+          </div>
+        </div>
+      </div>
+      <div class="graph-container" [ngClass]="getDisplayStatus()">
+        <img
+          src="/assets/icons/daily-graph.png"
+          alt="mid-graph"
+          class="left-graph daily"
+        />
+      </div>
+    </div>
+    <div class="right bot" [ngClass]="getDisplayStatus()">
+      <div class="title-container" [ngClass]="getDisplayStatus()" style="display: flex">
+        <div class="title" style="display: flex">
+          <p>מקדם הדבקה R</p>
+          <span class="info-icon">i</span>
+        </div>
+        <div class="options" style="display: flex">
+          <div class="share">
+            <img
+              src="/assets/icons/share-icon.png"
+              alt=""
+              style="height: 16px; width: 20px"
+            />
+          </div>
+          <div class="download">
+            <img
+              src="/assets/icons/down-arrow-full.png"
+              alt=""
+              style="height: 13px; width: 18px"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="notes" [ngClass]="getDisplayStatus()">
+        <div class="note-first" style="position: relative">
+          <span class="info-icon info2">i</span>
+          <p>הנתון היומי מתאר את הממוצע השבועי של מקדם ההדבקה לפני 10 ימים</p>
+        </div>
+        <div class="note-sec" style="display: flex">
+          <span class="line"></span>
+          <p>R=1 (R>1 מגיפה בהתפשטות)</p>
+        </div>
+      </div>
+      <div class="graph-container graph2" [ngClass]="getDisplayStatus()">
+        <img
+          src="/assets/icons/r-graph.png"
+          alt="mid-graph"
+          class="left-graph"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="w-100"></div>
+  <div class="col-4 two" [ngClass]="getDisplayStatus()">
+    <div class="mid top" >
+      <div class="title-container" style="display: flex">
+        <div class="title">
+          <p>אחוז בדיקות חיוביות</p>
+        </div>
+        <div class="options" style="display: flex">
+          <div class="time" style="display: flex">
+            <div class="time-container" style="display: flex">
+              <p>חודש אחרון</p>
+              <div class="arrow">
+                <img
+                  src="/assets/icons/expand-button.png"
+                  alt=""
+                  style="height: 7px; width: 7px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="share">
+            <img
+              src="/assets/icons/share-icon.png"
+              alt=""
+              style="height: 16px; width: 20px"
+            />
+          </div>
+          <div class="download">
+            <img
+              src="/assets/icons/down-arrow-full.png"
+              alt=""
+              style="height: 13px; width: 18px"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="graph-container">
+        <img
+          src="/assets/icons/verified-graph.png"
+          alt="mid-graph"
+          class="left-graph daily"
+        />
+      </div>
+    </div>
+    <div class="mid bot-mode" >
+        <div class="title-container" style="display: flex">
+            <div class="title title-mid">
+              <p>מספר בדיקות קורונה יומיות</p>
+            </div>
+            <div class="options" style="display: flex">
+              <div class="share">
+                <img
+                  src="/assets/icons/share-icon.png"
+                  alt=""
+                  style="height: 16px; width: 20px"
+                />
+              </div>
+              <div class="download">
+                <img
+                  src="/assets/icons/down-arrow-full.png"
+                  alt=""
+                  style="height: 13px; width: 18px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="index">
+            <div class="note-first note-mid" style="position: relative">
+                <span class="info-icon info2">i</span>
+                <p>הנתונים אינם כוללים מידע על בדיקות לאבחון החלמה</p>
+              </div>
+            <div class="vaccine-index" style="display: flex">
+              <div class="vaccine first">
+                <div class="dot"></div>
+                <p>בדיקות ללא סקר</p>
+              </div>
+              <div class="vaccine second">
+                <div class="dot sec"></div>
+                <p>בדיקות סקר</p>
+              </div>
+            </div>
+          </div>
+          <div class="graph-container">
+            <img
+              src="/assets/icons/daily-tests-graph.png"
+              alt="mid-graph"
+              class="left-graph daily"
+            />
+          </div>
+    </div>
+  </div>
+  <div class="w-100"></div>
+  <div class="col-4 three" [ngClass]="getDisplayStatus()">
+    <div class="left top" >
+        <div class="title-container" style="display: flex">
+            <div class="title">
+              <p>מספר חולים קשה - פעילים</p>
+            </div>
+            <div class="options" style="display: flex">
+              <div class="time" style="display: flex">
+                <div class="time-container" style="display: flex">
+                  <p>חודש אחרון</p>
+                  <div class="arrow">
+                    <img
+                      src="/assets/icons/expand-button.png"
+                      alt=""
+                      style="height: 7px; width: 7px"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="share">
+                <img
+                  src="/assets/icons/share-icon.png"
+                  alt=""
+                  style="height: 16px; width: 20px"
+                />
+              </div>
+              <div class="download">
+                <img
+                  src="/assets/icons/down-arrow-full.png"
+                  alt=""
+                  style="height: 13px; width: 18px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="graph-container">
+            <img
+              src="/assets/icons/active-severly-ill.png"
+              alt="mid-graph"
+              class="left-graph daily"
+            />
+          </div>
+    </div>
+    <div class="left bot-mode" >
+        <div class="title-container" style="display: flex">
+            <div class="title title-left">
+              <p>חולים קשים חדשים - יומי</p>
+            </div>
+            <div class="options" style="display: flex">
+              <div class="share">
+                <img
+                  src="/assets/icons/share-icon.png"
+                  alt=""
+                  style="height: 16px; width: 20px"
+                />
+              </div>
+              <div class="download">
+                <img
+                  src="/assets/icons/down-arrow-full.png"
+                  alt=""
+                  style="height: 13px; width: 18px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="index">
+            <div class="note note-left" style="display: flex">
+              <img
+                src="/assets/icons/light-bulb.png"
+                alt=""
+                class="lamp-icon"
+                style="width: 16px; height: 16px"
+              />
+              <p>
+                סה"כ 
+                <strong>17,274</strong>
+                חולים קשה
+                 ו - 
+                 <strong>3,591</strong>
+                מונשמים 
+                <strong>מאז תחילת המשבר (מרץ 2020)</strong>
+              </p>
+            </div>
+            <div class="vaccine-index" style="display: flex">
+              <div class="vaccine first">
+                <div class="dot sec"></div>
+                <p>חולים קשה</p>
+              </div>
+              <div class="vaccine second">
+                <div class="line-left"></div>
+                <p>ממוצע חולים קשה לתקופת הזמן המוצגת</p>
+              </div>
+            </div>
+          </div>
+          <div class="graph-container gr-con-left">
+            <img
+              src="/assets/icons/new-severly-ill-graph.png"
+              alt="mid-graph"
+              class="left-graph daily"
+            />
+          </div>
+    </div>
+  </div>
+</div>

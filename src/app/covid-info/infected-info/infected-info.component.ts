@@ -3,12 +3,11 @@ import { Subscription } from 'rxjs';
 import { ChangeDisplayService } from 'src/app/shared/change-display.service';
 
 @Component({
-  selector: 'app-general-info',
-  templateUrl: './general-info.component.html',
-  styleUrls: ['./general-info.component.css']
+  selector: 'app-infected-info',
+  templateUrl: './infected-info.component.html',
+  styleUrls: ['./infected-info.component.css']
 })
-export class GeneralInfoComponent implements OnInit {
-
+export class InfectedInfoComponent implements OnInit {
   displayStatus:boolean = false;
   displaySub!:Subscription;
   constructor(private displayService:ChangeDisplayService) { }
@@ -23,4 +22,5 @@ export class GeneralInfoComponent implements OnInit {
       return "dark-mode";
     return "";
   }
+
 }

@@ -1,8 +1,10 @@
-
 .info-container{
     padding-top: 167px;
-    height:1500px;
+    height:7850px;
     background-color: #edf1f7;
+}
+.dark-mode {
+    background-color: #49667a;
 }
 
 

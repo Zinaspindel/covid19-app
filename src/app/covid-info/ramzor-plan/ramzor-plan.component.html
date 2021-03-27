@@ -1,0 +1,154 @@
+<div class="row contain">
+    <div class="first" [ngClass]="getDisplayStatus()">
+      <div class="row title-container">
+        <div class="title">
+                <p>תוכנית הרמזור</p>
+                <span class="info-icon">i</span>          
+        </div>
+        <div class="options" style="position: relative;">
+            <div class="note-first note-mid" style="position: relative">
+                <span class="info-icon info2">i</span>
+                <p>הנתונים נכונים לתאריך 23/03/2021</p>
+              </div>
+          <div class="search-box">
+            <div class="search-icon"><i class="fa fa-search"></i></div>
+            <input type="text" class="search" placeholder="חיפוש יישוב" />
+          </div>
+          <div class="share">
+            <img
+              src="/assets/icons/share-icon.png"
+              alt=""
+              style="height: 16px; width: 20px"
+            />
+          </div>
+          <div class="download">
+            <img
+              src="/assets/icons/down-arrow-full.png"
+              alt=""
+              style="height: 13px; width: 18px"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="more-info">
+          <div class="comment">* מרכיבי ציון הרמזור (לפי נתוני השבוע האחרון)</div>
+          <div class="color-index">
+              <div class="color">
+                  <div class="red-back red"></div>
+                  <div class="color-info">
+                      <p class="description">אדום - פעילות מינימלית</p>
+                      <p class="grade">ציון 7.5 ומעלה</p>
+                  </div>
+              </div>
+              <div class="color">
+                <div class="orange-back orange"></div>
+                <div class="color-info">
+                    <p class="description">כתום - פעילות מצומצמת</p>
+                    <p class="grade">ציון בין 6 ל - 7.5</p>
+                </div>
+              </div>
+              <div class="color">
+                <div class="yellow-back yellow"></div>
+                <div class="color-info">
+                    <p class="description">צהוב - פעילות מוגבלת</p>
+                    <p class="grade">ציון בין 4.5 ל - 6</p>
+                </div>
+              </div>
+              <div class="color">
+                <div class="green-back green"></div>
+                <div class="color-info">
+                    <p class="description">ירוק - פעילות מורחבת</p>
+                    <p class="grade">ציון עד 4.5</p>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div class="row cities-table">
+        <div class="row table-values">
+          <div class="col head city-name">
+            ישוב
+          </div>
+          <div class="col head color-table">צבע החלטת ממשלה</div>
+          <div class="col head color-table">ציון וצבע יומי</div>
+          <div class="col-5 positive-container">
+            <div class="col head positive">חולים חדשים לכל 10,000 נפש *</div>
+            <div class="col head positive">% הבדיקות החיוביות *</div>
+            <div class="col head positive">שיעור שינוי מאומתים *</div>
+          </div>
+          <div class="col head active-patients">חולים פעילים</div>
+        </div>
+        <div class="row cities-values-container">
+          <div class="row city-values" *ngFor="let city of cities">
+            <div class="col active-patients2">{{ city.activePatients }}</div>
+            <div class="col-5 positive-container2">
+              <div class="col positive2">
+                <div class="cell-container">{{ city.positiveChange }}%</div>
+                
+                </div>
+              <div class="col positive2">
+                <div class="cell-container">{{ city.newPatients }}%</div>
+                </div>
+              <div class="col positive2">
+                <div class="cell-container">{{city.positiveTestPerc}}</div>
+              </div>
+            </div>
+            <div class="col color-table2">
+              <div class="grade-sqr"
+              [ngClass]="getColor(city)">
+                {{ city.grade }}
+              </div>
+              </div>
+            <div class="col color-table2">
+                <div class="color-sqr"
+                [ngClass]="getColor(city)">
+                </div>
+              </div>  
+            <div class="col city-name">
+                  <p>{{city.name}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="second" [ngClass]="getDisplayStatus()">
+      <div class="headline">
+        <div class="title-container2" style="display: flex">
+          <div class="title2">
+            <p>פילוח ציונים בתוכנית הרמזור 
+            </p>
+                <span class="info-icon2">i</span>     
+          </div>
+          <div class="options2" style="display: flex">
+            <div class="share2">
+              <img
+                src="/assets/icons/share-icon.png"
+                alt=""
+                style="height: 16px; width: 20px"
+              />
+            </div>
+            <div class="download2">
+              <img
+                src="/assets/icons/down-arrow-full.png"
+                alt=""
+                style="height: 13px; width: 18px"
+              />
+            </div>
+          </div>
+          
+        </div>
+        <div class="notes">
+          <div class="note" style="position: relative">
+            <span class="info-icon info2 info-note">i</span>
+            <p>הנתונים מבוססים על
+              <strong>ציון יומי מחושב של כל ישוב</strong>
+              ומשקללים את המדדים: חולים חדשים לכל 10,000 נפש, % בדיקות חיוביות ושיעור שינוי מאומתים שבועי
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="graph-container left">
+          <img src="/assets/icons/ramzor-grades-graph.png" alt="right-graph" class="graph">
+        </div>
+    </div>
+  </div>
+  
