@@ -251,6 +251,11 @@
     width:85%;
     height:65%;
 }
+@media screen and (max-width:1400px){
+    .table-header{
+        height:40px;
+    }
+}
 @media screen and (max-width:1200px){
     .row{
         height:1136px;

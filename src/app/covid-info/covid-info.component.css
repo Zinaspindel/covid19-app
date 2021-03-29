@@ -1,10 +1,19 @@
 .info-container{
     padding-top: 167px;
-    height:7850px;
+    height:3200px;
     background-color: #edf1f7;
 }
 .dark-mode {
     background-color: #49667a;
 }
-
+@media screen and (max-width:1400px){
+    .info-container{
+        height: 3400px;
+    }
+}
+@media screen and (max-width:1200px){
+    .info-container{
+        height:7850px;
+    }
+}
 
